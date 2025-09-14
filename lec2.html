@@ -9,6 +9,7 @@
 
 <body>
   <h1>HTML : Hyper Text Markup Language (Lecture 2)</h1>
+  <button><a href="lec3.html" target="_blank">Go to lecture 3</a></button>
   <hr>
   <div class="defination">
     <p>HTML stands for HyperText Markup Language. It is the standard language used to create and structure the content
@@ -41,20 +42,25 @@
   </div>
   <hr>
   <!-- codes -->
-  <table border="1">
-  <tr>
-    <!-- first row -->
-    <td width="900">
-      <h3>1: The Heading (&lt;h1&gt; to &lt;h6&gt;)</h3>
-      <p><b>What it is:</b> Headings are tags used to define titles and subtitles on your page. They are crucial for creating a logical hierarchy and outline for your content.</p>
-      <ul>
-        <li>&lt;h1&gt; : The most important heading, typically used only once per page for the main title.</li>
-        <li>&lt;h2&gt; : A major section heading.</li>
-        <li>&lt;h3&gt; : A sub-section heading under an &lt;h2&gt;.</li>
-      </ul>
-    </td>
-    <td width="100">
-      <code>
+   <center>
+
+   
+  <table border="1" cellpadding="10" cellspacing="0">
+    <h2>Some important html tags and their syntax:</h2>
+    <tr>
+      <!-- first row -->
+      <td width="500">
+        <h3>1: The Heading (&lt;h1&gt; to &lt;h6&gt;)</h3>
+        <p><b>What it is:</b> Headings are tags used to define titles and subtitles on your page. They are crucial for
+          creating a logical hierarchy and outline for your content.</p>
+        <ul>
+          <li>&lt;h1&gt; : The most important heading, typically used only once per page for the main title.</li>
+          <li>&lt;h2&gt; : A major section heading.</li>
+          <li>&lt;h3&gt; : A sub-section heading under an &lt;h2&gt;.</li>
+        </ul>
+      </td>
+      <td width="100">
+        <code>
         &lt;h1&gt;Heading 1&lt;/h1&gt; <br>
         &lt;h2&gt;Heading 2&lt;/h2&gt; <br>
         &lt;h3&gt;Heading 3&lt;/h3&gt; <br>
@@ -62,46 +68,51 @@
         &lt;h5&gt;Heading 5&lt;/h5&gt; <br>
         &lt;h6&gt;Heading 6&lt;/h6&gt;
       </code>
-    </td>
-  </tr>
+      </td>
+    </tr>
 
-  <tr>
-    <!-- second row -->
-    <td width="900">
-      <h3>2: The Paragraph (&lt;p&gt;)</h3>
-      <p><b>What it is:</b> The paragraph tag is the most common tag you'll use. It's for grouping sentences and blocks of text together.</p>
-      <p><b>The Purpose:</b> To define a distinct paragraph of text. Browsers automatically add space before and after a &lt;p&gt; element, separating it from other content. Avoid multiple line breaks; use multiple &lt;p&gt; tags instead.</p>
-    </td>
-    <td width="500">
-      <code>
+    <tr>
+      <!-- second row -->
+      <td width="500">
+        <h3>2: The Paragraph (&lt;p&gt;)</h3>
+        <p><b>What it is:</b> The paragraph tag is the most common tag you'll use. It's for grouping sentences and
+          blocks of text together.</p>
+        <p><b>The Purpose:</b> To define a distinct paragraph of text. Browsers automatically add space before and after
+          a &lt;p&gt; element, separating it from other content. Avoid multiple line breaks; use multiple &lt;p&gt; tags
+          instead.</p>
+      </td>
+      <td width="500">
+        <code>
 &lt;p&gt;This is the first paragraph. It contains several sentences about a topic.&lt;/p&gt; <br>
 &lt;p&gt;This is a second, separate paragraph. The browser will display it with a space between it and the first one.&lt;/p&gt;
       </code>
-    </td>
-  </tr>
-  <!-- third -->
-   <tr>
-   <td width="900">
-    <h3>3: HTML Horizontal Rules</h3>
-    <p>The &lt;hr&gt; tag defines a thematic break in an HTML page, and is most often displayed as a horizontal rule.</p>
-    <p>The &lt;hr&gt; element is used to separate content (or define a change) in an HTML page:</p>
-   </td>
-   <td width="500">
-    <code>
+      </td>
+    </tr>
+    <!-- third -->
+    <tr>
+      <td width="500">
+        <h3>3: HTML Horizontal Rules</h3>
+        <p>The &lt;hr&gt; tag defines a thematic break in an HTML page, and is most often displayed as a horizontal
+          rule.</p>
+        <p>The &lt;hr&gt; element is used to separate content (or define a change) in an HTML page:</p>
+      </td>
+      <td width="500">
+        <code>
       &lt;p&gt;This is the first topic.&lt;/p&gt;
 &lt;hr /&gt; <br>
 &lt;p&gt;This is a completely different topic.&lt;/p&gt;
 
     </code>
-   </td>
-   </tr>
-   <!-- fourth -->
-    <tr>
-      <td  width="900">
-        <h3>4. The Line Break Tag: &lt;br&gt;</h3>
-        <p>This tag tells the browser, "Stop writing on this line and immediately start on the next one." It's like hitting the Enter key once in a poem or an address.</p>
       </td>
-      <td  width="500">
+    </tr>
+    <!-- fourth -->
+    <tr>
+      <td width="500">
+        <h3>4. The Line Break Tag: &lt;br&gt;</h3>
+        <p>This tag tells the browser, "Stop writing on this line and immediately start on the next one." It's like
+          hitting the Enter key once in a poem or an address.</p>
+      </td>
+      <td width="500">
         <code>
           &lt;p&gt;221B Baker Street&lt;br&gt; <br>
 London, England&lt;/p&gt;
@@ -110,8 +121,8 @@ London, England&lt;/p&gt;
       </td>
     </tr>
     <!-- fifth -->
-     <tr>
-      <td  width="900">
+    <tr>
+      <td width="500">
         <h3>5. List Elements (&lt;u&gt;, &lt;ol&gt;, &lt;li&gt;)</h3>
         <p>
           <b>What it is:</b> These tags are used to create lists. This is a perfect example of nesting.
@@ -142,9 +153,69 @@ London, England&lt;/p&gt;
 
         </code>
       </td>
-     </tr>
-</table>
+    </tr>
+    <!-- sixth -->
+     <tr>
+      <td>
+        <h3>6: The Anchor Tag (&lt;a&gt;)</h3>
+        <p>
+          <b>What it is:</b> The Anchor tag is what makes the web "hypertext." It is used to create a hyperlink to another webpage, a file, or a location within the same page. <br>
 
+<b>The Tag:</b> &lt;a&gt; <br>
+
+<b>The Purpose:</b> To make text (or an image) clickable, allowing users to navigate. It requires an <b>attribute</b> calledhref (hypertext reference) to specify the destination URL.
+        </p>
+        <h4>HTML Links - The target Attribute</h4>
+        <ul>
+          <li>target → defines where the linked page will open.</li>
+          <li>Default: _self → opens in the same tab/window.</li>
+          <li>_blank → opens in a new tab/window</li>
+        </ul>
+      </td>
+      <td>
+        <code>
+        &lt;a href="https://www.coderarmy.in/"&gt;Visit Coder Army&lt;/a&gt;
+        </code>
+
+      </td>
+     </tr>
+     <!-- seventh -->
+      <tr>
+        <td>
+          <h3>8. The Image Tag (&lt;img&gt;)</h3>
+          <ul>
+            <li><b>Tag:</b> &lt;img&gt; (self-closing)</li>
+            <li><b>Purpose:</b> Displays an image on a webpage.</li>
+            <li><b>Main Attributes:</b>
+              <ul>
+
+                <li>src → path or URL of the image (required)</li>
+                <li>alt → text description for accessibility & fallback</li>
+              </ul>
+            </li>
+          </ul>
+        </td>
+        <td>
+          <code>
+            &lt;img src="https://cdn.britannica.com/16/234216-050-C66F8665/beagle-hound-dog.jpg" height="300px" width="300px" alt="This is Dog Photo"&gt;
+
+          </code>
+        </td>
+      </tr>
+  </table>
+  </center>
+
+  <!-- video lecture -->
+   <center>
+    <h2>See the video lecture</h2>
+     <iframe width="760" height="415" src="https://www.youtube.com/embed/GkZN_-HMCJ8?si=4z-jhjWHxJ83dw2f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </center> <br> <br> <br> <br>
+ <!-- copy right section -->
+    <footer>
+    <center>
+      <p>&copy; 2025 Monalisa</p>
+    </center>
+  </footer>
 
 </body>
 

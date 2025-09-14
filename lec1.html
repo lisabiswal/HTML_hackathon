@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lecture 1</title>
 </head>
+
 <body>
   <h1>How Does Internet Work? (Lecture 1) </h1>
+  <button><a href="lec2.html" target="_blank">Go to lecture 2</a></button>
   <hr>
   <!-- all the 5 principles -->
-   <table cellpadding="0">
+  <table cellpadding="0">
     <center>
     </center>
-     <tr>
-      <td >
-      <h3>Principle 1: The Need to Share Information</h3>
-      <p>To transfer data from Computer A to Computer B, the simplest method is physically carrying it, like using a USB drive, but this is slow and doesn’t scale well. A better approach is to connect the two computers directly with a cable, such as Ethernet or fiber optic, allowing signals like voltage or light pulses to represent 1s and 0s. This forms a <b>direct link</b>, which is the most basic type of computer network.</p>
+    <tr>
+      <td>
+        <h3>Principle 1: The Need to Share Information</h3>
+        <p>To transfer data from Computer A to Computer B, the simplest method is physically carrying it, like using a
+          USB drive, but this is slow and doesn’t scale well. A better approach is to connect the two computers directly
+          with a cable, such as Ethernet or fiber optic, allowing signals like voltage or light pulses to represent 1s
+          and 0s. This forms a <b>direct link</b>, which is the most basic type of computer network.</p>
       <td rowspan="2">
         <img src="images/What-is-Internet.webp" width="500" alt="">
       </td>
@@ -24,94 +30,122 @@
     <tr>
       <td>
         <div class="princ2">
-      <h3>Principle 2: The Problem of Scale</h3>
-      <p>When more than two computers need to communicate, directly connecting each one to every other becomes impractical, as the number of cables grows rapidly and doesn’t scale. The solution is to use a central device, called a <b>switch</b>, where each computer connects with just one cable. If Computer A wants to send data to Computer C, it sends the message to the switch, which then forwards it only to the intended computer. This setup forms a <b>Local Network</b>, allowing multiple computers in the same area, such as an office or home, to communicate efficiently.</p>
-    </div>
+          <h3>Principle 2: The Problem of Scale</h3>
+          <p>When more than two computers need to communicate, directly connecting each one to every other becomes
+            impractical, as the number of cables grows rapidly and doesn’t scale. The solution is to use a central
+            device, called a <b>switch</b>, where each computer connects with just one cable. If Computer A wants to
+            send data to Computer C, it sends the message to the switch, which then forwards it only to the intended
+            computer. This setup forms a <b>Local Network</b>, allowing multiple computers in the same area, such as an
+            office or home, to communicate efficiently.</p>
+        </div>
       </td>
     </tr>
-    
+
     <tr>
       <td colspan="2">
-      <h3>Principle 3: The Problem of Connecting Networks</h3>
-      <p>Once we have local networks in different places, like two offices across town, the challenge is connecting them. Running cables between every computer in both networks is impossible, so the solution is to connect the networks themselves. This is done using a special device called a Router, which links one local network to another and forwards traffic between them. By connecting routers from different networks, we can create a large web of interconnected systems. This forms the basis of the Internet: a network of networks, made up of countless private and public local networks connected together through routers.</p>
+        <h3>Principle 3: The Problem of Connecting Networks</h3>
+        <p>Once we have local networks in different places, like two offices across town, the challenge is connecting
+          them. Running cables between every computer in both networks is impossible, so the solution is to connect the
+          networks themselves. This is done using a special device called a Router, which links one local network to
+          another and forwards traffic between them. By connecting routers from different networks, we can create a
+          large web of interconnected systems. This forms the basis of the Internet: a network of networks, made up of
+          countless private and public local networks connected together through routers.</p>
       </td>
     </tr>
     <tr>
       <td colspan="2">
         <h3>Principle 4: The Problem of Finding Anyone (Addressing)</h3>
-        <p>In a global web of interconnected networks, every device needs a unique way to be identified so messages reach the correct destination. This is solved by the IP Address (Internet Protocol Address), which works like a digital street address (e.g., 142.250.184.142). Each device is assigned one, ensuring it can be uniquely located. When a message is sent, routers read the destination IP address and decide where to forward it next. They don’t know the entire journey, only the best next “hop” that brings the message closer to its destination. This system allows communication across millions of computers worldwide.</p>
+        <p>In a global web of interconnected networks, every device needs a unique way to be identified so messages
+          reach the correct destination. This is solved by the IP Address (Internet Protocol Address), which works like
+          a digital street address (e.g., 142.250.184.142). Each device is assigned one, ensuring it can be uniquely
+          located. When a message is sent, routers read the destination IP address and decide where to forward it next.
+          They don’t know the entire journey, only the best next “hop” that brings the message closer to its
+          destination. This system allows communication across millions of computers worldwide.</p>
       </td>
     </tr>
     <tr>
       <td colspan="2">
         <h3>Principle 5: The Problem of Reliability and Fairness</h3>
-        <p>Sending a big file all at once is slow and risky, so the file is split into small pieces called packets. Each packet has some data, the sender and receiver’s IP addresses, and a number to keep them in order. Packets may travel on different paths, but at the end, the receiver collects them, fixes any missing parts, and puts them back together. The rules that handle this process are called TCP/IP, the main protocol of the internet.</p>
+        <p>Sending a big file all at once is slow and risky, so the file is split into small pieces called packets. Each
+          packet has some data, the sender and receiver’s IP addresses, and a number to keep them in order. Packets may
+          travel on different paths, but at the end, the receiver collects them, fixes any missing parts, and puts them
+          back together. The rules that handle this process are called TCP/IP, the main protocol of the internet.</p>
       </td>
     </tr>
-   </table>
-  
+  </table>
+
   <hr>
   <!-- Core Internet Concepts at a Glance -->
-   <h2>Core Internet Concepts at a Glance</h2>
-   <center>
-   <table border="1" cellspacing="0" cellpadding="10">
-    <thead>
-      <tr>
-        <th>Concept</th>
-        <th>Meaning / Purpose</th>
-        <th>Key Details / Examples</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Public IP</td>
-        <td>Global, unique address on the internet</td>
-        <td>Given by ISP, must be unique; e.g., your router, Google/Netflix servers</td>
-      </tr>
-      <tr>
-        <td>Private IP</td>
-        <td>Local address used only inside private networks</td>
-        <td>Assigned by router; only unique within network; ranges: 10.x.x.x, 172.16–31.x.x, 192.168.x.x</td>
-      </tr>
-      <tr>
-        <td>IPv4</td>
-        <td>Internet Protocol version 4 (old system)</td>
-        <td>32-bit (~4.3B addresses), example: 142.250.72.206</td>
-      </tr>
-      <tr>
-        <td>IPv6</td>
-        <td>Next-gen protocol to solve address shortage</td>
-        <td>128-bit (~340 undecillion addresses), uses hex, example: 2001:0db8:85a3:0000:8a2e:0370:7334</td>
-      </tr>
-      <tr>
-        <td>MAC Address</td>
-        <td>Unique hardware ID for each device</td>
-        <td>48-bit, permanent, formats: 3C:22:FB:A3:B4:C5 or 3C-22-FB-A3-B4-C5</td>
-      </tr>
-      <tr>
-        <td>Port Number</td>
-        <td>Identifies services/apps on a device (0–65535)</td>
-        <td>
-          <ul>
-            <li>Well-known (0–1023): HTTP 80, HTTPS 443, SSH 22</li>
-            <li>Registered (1024–49151): React 3000, MongoDB 27017</li>
-            <li>Dynamic (49152–65535): temporary client ports</li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <td>DNS</td>
-        <td>Converts domain names into IP addresses</td>
-        <td>Steps: Local cache → Recursive Resolver → Root → TLD → Authoritative server → Final IP</td>
-      </tr>
-    </tbody>
-   </table><br><br>
+  <h2>Core Internet Concepts at a Glance</h2>
+  <center>
+    <table border="1" cellspacing="0" cellpadding="10">
+      <thead>
+        <tr>
+          <th>Concept</th>
+          <th>Meaning / Purpose</th>
+          <th>Key Details / Examples</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Public IP</td>
+          <td>Global, unique address on the internet</td>
+          <td>Given by ISP, must be unique; e.g., your router, Google/Netflix servers</td>
+        </tr>
+        <tr>
+          <td>Private IP</td>
+          <td>Local address used only inside private networks</td>
+          <td>Assigned by router; only unique within network; ranges: 10.x.x.x, 172.16–31.x.x, 192.168.x.x</td>
+        </tr>
+        <tr>
+          <td>IPv4</td>
+          <td>Internet Protocol version 4 (old system)</td>
+          <td>32-bit (~4.3B addresses), example: 142.250.72.206</td>
+        </tr>
+        <tr>
+          <td>IPv6</td>
+          <td>Next-gen protocol to solve address shortage</td>
+          <td>128-bit (~340 undecillion addresses), uses hex, example: 2001:0db8:85a3:0000:8a2e:0370:7334</td>
+        </tr>
+        <tr>
+          <td>MAC Address</td>
+          <td>Unique hardware ID for each device</td>
+          <td>48-bit, permanent, formats: 3C:22:FB:A3:B4:C5 or 3C-22-FB-A3-B4-C5</td>
+        </tr>
+        <tr>
+          <td>Port Number</td>
+          <td>Identifies services/apps on a device (0–65535)</td>
+          <td>
+            <ul>
+              <li>Well-known (0–1023): HTTP 80, HTTPS 443, SSH 22</li>
+              <li>Registered (1024–49151): React 3000, MongoDB 27017</li>
+              <li>Dynamic (49152–65535): temporary client ports</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>DNS</td>
+          <td>Converts domain names into IP addresses</td>
+          <td>Steps: Local cache → Recursive Resolver → Root → TLD → Authoritative server → Final IP</td>
+        </tr>
+      </tbody>
+    </table><br><br>
+    <div class="video">
+      <h2>See the video lecture</h2>
+      <iframe width="760" height="415" src="https://www.youtube.com/embed/1pcikNlDB-4?si=G_YrE0ZHHDPOXuFx"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </center><br> <br> <br> <br>
+  <!-- copy right section -->
+  <footer>
+    <center>
+      <p>&copy; 2025 Monalisa</p>
+    </center>
+  </footer>
 
 
-   <div class="video">
-    <iframe width="760" height="415" src="https://www.youtube.com/embed/1pcikNlDB-4?si=G_YrE0ZHHDPOXuFx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-   </div>
-   <button><a href="https://www.youtube.com/watch?v=1pcikNlDB-4">Go to YouTube</a></button>
-   </center>
 </body>
+
 </html>
