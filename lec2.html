@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>lecture 2</title>
+</head>
+
+<body>
+  <h1>HTML : Hyper Text Markup Language (Lecture 2)</h1>
+  <hr>
+  <div class="defination">
+    <p>HTML stands for HyperText Markup Language. It is the standard language used to create and structure the content
+      of a webpage.</p>
+    <dl>
+      <dt><b>HyperText:</b></dt>
+      <dd>This refers to the ability to create links that connect web pages to one another, making the web a connected
+        "web" of information.</dd>
+    </dl>
+    <dl>
+      <dt><b>Markup Language:</b></dt>
+      <dd>This means you use "tags" to surround your content, giving that content meaning and structure. You are
+        "marking up" a plain text document.</dd>
+    </dl>
+
+  </div>
+  <hr>
+  <!-- Installation -->
+  <div class="install">
+    <h2>Installation</h2>
+    <h3>1. Install Visual Studio Code</h3>
+    <p>This is a free piece of software from Microsoft that you will use to write your code.</p>
+    <button><a href="https://code.visualstudio.com/">Download from here</a></button>
+    <h3>2: Install Visual Studio Code Extensions</h3>
+    <ul>
+      <li>Live Preview</li>
+      <li>Prettier</li>
+      <li>Live Server</li>
+    </ul>
+  </div>
+  <hr>
+  <!-- codes -->
+  <table border="1">
+  <tr>
+    <!-- first row -->
+    <td width="900">
+      <h3>1: The Heading (&lt;h1&gt; to &lt;h6&gt;)</h3>
+      <p><b>What it is:</b> Headings are tags used to define titles and subtitles on your page. They are crucial for creating a logical hierarchy and outline for your content.</p>
+      <ul>
+        <li>&lt;h1&gt; : The most important heading, typically used only once per page for the main title.</li>
+        <li>&lt;h2&gt; : A major section heading.</li>
+        <li>&lt;h3&gt; : A sub-section heading under an &lt;h2&gt;.</li>
+      </ul>
+    </td>
+    <td width="100">
+      <code>
+        &lt;h1&gt;Heading 1&lt;/h1&gt; <br>
+        &lt;h2&gt;Heading 2&lt;/h2&gt; <br>
+        &lt;h3&gt;Heading 3&lt;/h3&gt; <br>
+        &lt;h4&gt;Heading 4&lt;/h4&gt; <br>
+        &lt;h5&gt;Heading 5&lt;/h5&gt; <br>
+        &lt;h6&gt;Heading 6&lt;/h6&gt;
+      </code>
+    </td>
+  </tr>
+
+  <tr>
+    <!-- second row -->
+    <td width="900">
+      <h3>2: The Paragraph (&lt;p&gt;)</h3>
+      <p><b>What it is:</b> The paragraph tag is the most common tag you'll use. It's for grouping sentences and blocks of text together.</p>
+      <p><b>The Purpose:</b> To define a distinct paragraph of text. Browsers automatically add space before and after a &lt;p&gt; element, separating it from other content. Avoid multiple line breaks; use multiple &lt;p&gt; tags instead.</p>
+    </td>
+    <td width="500">
+      <code>
+&lt;p&gt;This is the first paragraph. It contains several sentences about a topic.&lt;/p&gt; <br>
+&lt;p&gt;This is a second, separate paragraph. The browser will display it with a space between it and the first one.&lt;/p&gt;
+      </code>
+    </td>
+  </tr>
+  <!-- third -->
+   <tr>
+   <td width="900">
+    <h3>3: HTML Horizontal Rules</h3>
+    <p>The &lt;hr&gt; tag defines a thematic break in an HTML page, and is most often displayed as a horizontal rule.</p>
+    <p>The &lt;hr&gt; element is used to separate content (or define a change) in an HTML page:</p>
+   </td>
+   <td width="500">
+    <code>
+      &lt;p&gt;This is the first topic.&lt;/p&gt;
+&lt;hr /&gt; <br>
+&lt;p&gt;This is a completely different topic.&lt;/p&gt;
+
+    </code>
+   </td>
+   </tr>
+   <!-- fourth -->
+    <tr>
+      <td  width="900">
+        <h3>4. The Line Break Tag: &lt;br&gt;</h3>
+        <p>This tag tells the browser, "Stop writing on this line and immediately start on the next one." It's like hitting the Enter key once in a poem or an address.</p>
+      </td>
+      <td  width="500">
+        <code>
+          &lt;p&gt;221B Baker Street&lt;br&gt; <br>
+London, England&lt;/p&gt;
+
+        </code>
+      </td>
+    </tr>
+    <!-- fifth -->
+     <tr>
+      <td  width="900">
+        <h3>5. List Elements (&lt;u&gt;, &lt;ol&gt;, &lt;li&gt;)</h3>
+        <p>
+          <b>What it is:</b> These tags are used to create lists. This is a perfect example of nesting.
+        </p>
+        <ul>
+          <li>&lt;ul&gt;: An Unordered List. It creates a bulleted list.</li>
+          <li>&lt;ol&gt;: An Ordered List. It creates a numbered list.</li>
+          <li>
+            &lt;li&gt;: A List Item. Each item in either type of list must be wrapped in an &lt;li&gt; tag.
+          </li>
+        </ul>
+      </td>
+      <td width="500">
+        <code>
+          &lt;ul&gt; <br>
+  &lt;li&gt;Tea Bag&lt;/li&gt; <br>
+  &lt;li&gt;Water&lt;/li&gt; <br>
+  &lt;li&gt;Sugar&lt;/li&gt; <br>
+  &lt;li&gt;Milk&lt;/li&gt; <br>
+&lt;/ul&gt; <br> <br>
+
+&lt;ol&gt; <br>
+  &lt;li&gt;First, boil the water in a kettle.&lt;/li&gt; <br>
+  &lt;li&gt;Add tea bag, sugar and milk into it&lt;/li&gt; <br>
+  &lt;li&gt;Keep boiling it for 5 minutes&lt;/li&gt; <br>
+  &lt;li&gt;Serve the tea by pouring it into cup&lt;/li&gt; <br>
+&lt;/ol&gt; <br>
+
+        </code>
+      </td>
+     </tr>
+</table>
+
+
+</body>
+
+</html>
