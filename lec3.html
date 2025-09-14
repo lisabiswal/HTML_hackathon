@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lecture 3</title>
+</head>
+
+<body>
+  <h1>HTML List and Tables (Lecture 3) </h1>
+  <button><a href="lec4.html" target="_blank">Go to lecture 4</a></button> <hr>
+  <div class="list">
+    <h2>HTML Lists</h2>
+    <p>In HTML, lists are used to group related items together in an organized way. They make information easier to read
+      and understand. There are three main types of lists in HTML:</p>
+    <ol>
+      <!-- ordered list -->
+      <li><h3><b>Ordered List (&lt;ol&gt;)</b></h3>
+        <p>
+          An ordered list is used when the order of items matters. Items are automatically numbered. <br>
+          Example uses: steps in a recipe, instructions, rankings.
+          <code>
+  <h3>Code:</h3>
+  &lt;ol&gt; <br>
+    &lt;li&gt;HTML&lt;/li&gt; <br>
+    &lt;li&gt;CSS&lt;/li&gt; <br>
+    &lt;li&gt;JavaScript&lt;/li&gt; <br>
+  &lt;/ol&gt; <br>
+
+  <h3>Output: </h3>
+  <ol>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+  </ol>
+</code>
+        </p>
+      </li>
+      <!-- un-ordered list -->
+      <li><h3><b>Unordered List (&lt;ul&gt;)</b></h3>
+        <p>
+          An unordered list is used when the order does not matter. Items are marked with bullets by default. <br>
+          Example uses: shopping lists, features of a product, ingredients.
+        </p>
+        <code>
+          <h3>Code:</h3>
+          &lt;ul&gt; <br>
+            &lt;li&gt;Apples&lt;/li&gt; <br>
+            &lt;li&gt;Bananas&lt;/li&gt; <br>
+            &lt;li&gt;Mangoes&lt;/li&gt; <br>
+          &lt;/ul&gt; <br>
+          <h3>Output: </h3>
+          <ul>
+            <li>Apples</li>
+            <li>Bananas</li>
+            <li>Mangoes</li>
+          </ul>
+        </code>
+      </li>
+      <!-- description list -->
+      <li><h3><b>Description List (&lt;dl&gt;)</b></h3>
+        <p>
+          A description list is used for pairs of terms and their descriptions. Each list contains a term (&lt;dt&gt;)
+          and a description (&lt;dd&gt;). <br>
+          Example uses: glossaries, FAQs, definitions.
+        </p>
+        <code>
+          <h3>Code:</h3>
+          &lt;dl&gt; <br>
+          &lt;dt&gt;HTML&lt;/dt&gt; <br>
+          &lt;dd&gt;HyperText Markup Language&lt;/dd&gt; <br>
+          &lt;dt&gt;CSS&lt;/dt&gt; <br>
+          &lt;dd&gt;Cascading Style Sheets&lt;/dd&gt; <br>
+          &lt;dt&gt;JavaScript&lt;/dt&gt; <br>
+          &lt;dd&gt;Programming language for the web&lt;/dd&gt; <br>
+        &lt;/dl&gt; <br>
+        <h3>Output:</h3>
+        <dl>
+          <dt>HTML</dt>
+          <dd>HyperText Markup Language</dd>
+          <dt>CSS</dt>
+          <dd>Cascading Style Sheets</dd>
+          <dt>JavaScript</dt>
+          <dd>Programming language for the web</dd>
+        </dl>
+        </code>
+      </li>
+      <li>
+        <h3><b>Nested Lists</b></h3>
+        <p>Lists can also be nested, meaning one list can be placed inside another. This is helpful for showing categories and subcategories.</p>
+      </li>
+    </ol>
+  </div>
+  <hr>
+
+  <!-- html table -->
+  <div class="table">
+    <h2>HTML Tables</h2>
+    <p>A table in HTML is used to display data in rows and columns. It organizes information neatly and is especially
+      useful for reports, comparison charts, schedules, and product listings.</p>
+    <center>
+      <table cellpadding="20" border="1" cellspacing="0">
+        <tr>
+          <th width="100">Element</th>
+          <th>Purpose</th>
+        </tr>
+        <tr>
+          <td>&lt;table&gt;</td>
+          <td>Creates the table</td>
+        </tr>
+        <tr>
+          <td>&lt;tr&gt;</td>
+          <td>Defines a table row</td>
+        </tr>
+        <tr>
+          <td>&lt;th&gt;</td>
+          <td>Defines a table header cell (bold and centered by default)</td>
+        </tr>
+        <tr>
+          <td>&lt;td&gt;</td>
+          <td>Defines a table data cell</td>
+        </tr>
+        <tr>
+          <td>&lt;thead&gt;</td>
+          <td>Groups the table header rows</td>
+        </tr>
+        <tr>
+          <td>&lt;tbody&gt;</td>
+          <td>Groups the table body rows</td>
+        </tr>
+        <tr>
+          <td>&lt;tfoot&gt;</td>
+          <td>Groups the table footer rows (like totals or summary)</td>
+        </tr>
+        <tr>
+          <td>colspan</td>
+          <td>Merges columns in a row</td>
+        </tr>
+        <tr>
+          <td>rowspan</td>
+          <td>Merges rows in a column</td>
+        </tr>
+      </table>
+    </center>
+  </div>
+
+  <!-- table code -->
+  <div class="code">
+    <code>
+        <h3>Code:</h3>
+        <div>
+          <pre>
+          &lt;table border="1" cellpadding="8" cellspacing="0"&gt; 
+          &lt;thead&gt; 
+            &lt;tr&gt; 
+              &lt;th&gt;Name&lt;/th&gt; 
+              &lt;th&gt;Math&lt;/th&gt; 
+              &lt;th&gt;Science&lt;/th&gt; 
+              &lt;th&gt;English&lt;/th&gt; 
+            &lt;/tr&gt; 
+          &lt;/thead&gt; 
+          &lt;tbody&gt; 
+            &lt;tr&gt; 
+              &lt;td&gt;Lisa&lt;/td&gt; 
+              &lt;td&gt;90&lt;/td&gt; 
+              &lt;td&gt;85&lt;/td&gt; 
+              &lt;td&gt;88&lt;/td&gt; 
+            &lt;/tr&gt; 
+            &lt;tr&gt; 
+              &lt;td&gt;John&lt;/td&gt; 
+              &lt;td&gt;75&lt;/td&gt; 
+              &lt;td&gt;80&lt;/td&gt; 
+              &lt;td&gt;78&lt;/td&gt; 
+            &lt;/tr&gt; 
+          &lt;/tbody&gt; 
+          &lt;tfoot&gt; 
+            &lt;tr&gt; 
+              &lt;td colspan="4"&gt;Total Students: 2&lt;/td&gt; 
+            &lt;/tr&gt; 
+          &lt;/tfoot&gt; 
+          &lt;/table&gt; 
+          </pre>
+          <h3>Output:</h3>
+          <table border="1" cellpadding="8" cellspacing="0">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Math</th>
+                <th>Science</th>
+                <th>English</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Lisa</td>
+                <td>90</td>
+                <td>85</td>
+                <td>88</td>
+              </tr>
+              <tr>
+                <td>John</td>
+                <td>75</td>
+                <td>80</td>
+                <td>78</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="4">Total Students: 2</td>
+              </tr>
+            </tfoot>
+            </table>
+
+        </div>
+      </code>
+  </div> <br><br>
+
+  <!-- video lecture -->
+   <div class="video">
+     <center>
+      <h2>See the video lecture</h2>
+      <iframe width="760" height="415" src="https://www.youtube.com/embed/AJ4E1zf5tQs?si=FJ-K-kgTsYLhIpwY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </center>
+   </div> <br> <br> <br> <br>
+
+  <footer>
+    <center>
+      <p>&copy; 2025 Monalisa</p>
+    </center>
+  </footer>
+</body>
+
+</html>
