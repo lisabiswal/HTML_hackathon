@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lecture 5</title>
+</head>
+
+<body>
+  <h1>Flexbox in CSS (Lecture 5) </h1>
+  <button><a href="lec6.html" target="_blank">Go to lecture 6</a></button>
+  <hr>
+
+  <!-- introduction -->
+   <div>
+    <h2>Introduction</h2>
+    <p>Flexbox (Flexible Box Layout Module) is a modern CSS layout system that provides an efficient way to arrange, align, and distribute space among items in a container. Unlike traditional methods (float, table, inline-block), Flexbox is direction-aware and adapts easily to different screen sizes, making it very useful in responsive web design.</p>
+    <center>
+      <img src="images/flex-box.png" alt="">
+    </center>
+   </div><hr>
+
+   <!-- main concepts -->
+    <div>
+      <h2>Main Concepts</h2>
+      <ol>
+        <li><h3>Flex Container</h3>
+          <ul>
+            <li>The parent element with display: flex; or display: inline-flex;.</li>
+            <li>Defines a main axis (horizontal if row, vertical if column) and a cross axis (the opposite).</li>
+          </ul>
+        </li>
+        <li><h3>Flex Items</h3>
+          <ul>
+            <li>The direct children of a flex container.</li>
+            <li>Their size and alignment can be controlled independently or as a group.</li>
+          </ul>
+        </li>
+      </ol>
+    </div><hr>
+
+    <!-- Flex Container Properties -->
+     <div>
+      <h3>Flex Container Properties</h3>
+      <ul>
+        <li><b>flex-direction</b>→ Sets direction of main axis.
+Values: row (default), row-reverse, column, column-reverse.</li>
+        <li><b>justify-content</b>→ Alignment along main axis.
+Values: flex-start, flex-end, center, space-between, space-around, space-evenly.</li>
+        <li><b>align-items</b>→ Alignment along cross axis.
+Values: stretch (default), flex-start, flex-end, center, baseline.</li>
+        <li><b>flex-wrap</b>→ Controls whether items stay in one line or wrap.
+Values: nowrap (default), wrap, wrap-reverse.</li>
+        <li><b>align-content</b>→ Controls spacing between wrapped lines.
+Works only when multiple rows exist.</li>
+      </ul>
+     </div><hr>
+
+     <!-- Flex Item Properties -->
+      <div>
+      <h3>Flex Item Properties</h3>
+      <ul>
+        <li><b>order</b>→ Controls the order of items (default is 0).</li>
+        <li><b>flex-grow</b>→ Defines how much the item grows relative to others.</li>
+        <li><b>flex-shrink</b>→ Defines how much the item shrinks relative to others.</li>
+        <li><b>flex-basis</b>→ Defines initial size before growing/shrinking.</li>
+        <li><b>flex</b>→ Shorthand for flex-grow flex-shrink flex-basis</li>
+        <li><b>align-self</b>→ Overrides align-items for a single item.</li>
+      </ul>
+     </div><hr>
+
+     <!-- Advantages of Flexbox -->
+      <div>
+        <h2>Advantages of Flexbox</h2>
+        <ol>
+          <li>Easy centering (both vertically and horizontally).</li>
+          <li>Automatic equal spacing distribution.</li>
+          <li>Flexible resizing for dynamic content.</li>
+          <li>Simplifies responsive design (adapts to screens).</li>
+          <li>Can reorder items without touching HTML.</li>
+          <li>Reduces the need for float, table, and position hacks.</li>
+        </ol>
+      </div><hr>
+
+      <!-- Limitations -->
+       <div>
+        <h2>Limitations</h2>
+        <ol>
+          <li>Designed for 1D layouts (row or column).</li>
+          <li>For full 2D layouts (rows + columns together), CSS Grid is better.</li>
+          <li>Complex nested flex structures can sometimes be confusing.</li>
+        </ol>
+       </div><br><br><br>
+
+       <!-- video lecture -->
+
+  <div>
+    <center>
+      <h2>See the video lecture</h2>
+      <iframe width="760" height="415" src="https://www.youtube.com/embed/KD5mNp8PTko?si=9JDz5TwztjUFTYec" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </center>
+  </div><br><br><br><br>
+  
+  <!-- footer section -->
+  <footer>
+    <center>
+      <p>&copy; 2025 Monalisa</p>
+    </center>
+  </footer>
+
+</body>
+
+</html>
