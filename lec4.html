@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lecture 4</title>
+</head>
+
+<body>
+  <h1>Cascade & Positioning in CSS (Lecture 4) </h1>
+  <button><a href="lec5.html" target="_blank">Go to lecture 5</a></button>
+  <hr>
+
+  <!-- cascading rules -->
+  <div>
+    <h2>Cascading rules</h2>
+    <p>The CSS Cascade is the rule system browsers use to decide which style wins when multiple CSS rules target the
+      same element. Since browsers can’t guess, they follow a strict hierarchy (like tie-breaker rounds). Once a winner
+      is found, later rules are ignored.</p>
+    <h3>Rules:</h3>
+    <ol>
+      <li>
+        <b>Origin of Styles:</b>
+        <ul>
+          <li>Browser default styles, user styles, and author (developer) styles compete.</li>
+          <li>Author styles usually win over browser defaults.</li>
+          <li type="square">
+            <pre><code>&lt;p&gt;Hello World&lt;/p&gt;
+&lt;style&gt; 
+p { 
+  color: blue; 
+  } 
+&lt;/style&gt;   
+            </code></pre>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <b>Specificity:</b>
+        <ul>
+          <li>Inline > ID > Class/Attribute/Pseudo-class > Element/Pseudo-element.</li>
+          <li type="square">
+            <pre><code>&lt;p class="text" id="main" style="color: red;"&gt;Hello&lt;/p&gt;
+&lt;style&gt;
+p { color: blue; }        /* lowest specificity */
+.text { color: green; }   /* class is stronger */
+#main { color: purple; }  /* id is stronger */
+&lt;/style&gt;
+</code></pre>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <b>Importance:</b>
+        <ul>
+          <li>!important beats everything except another !important with higher specificity.</li>
+          <li type="square">
+            <pre><code>&lt;p class="note"&gt;Hello&lt;/p&gt;
+&lt;style&gt;
+  p { color: blue !important; }   /* wins */
+  .note { color: green; }         
+&lt;/style&gt;
+</code></pre>
+
+          </li>
+        </ul>
+      </li>
+      <li>
+        <b>Source Order:</b>
+        <ul>
+          <li>If specificity and importance are equal, the last rule in code wins.</li>
+          <li type="square">
+            <pre><code>&lt;p&gt;Hello&lt;/p&gt;
+&lt;style&gt;
+  p { color: blue; }
+  p { color: green; } /* last rule wins */
+&lt;/style&gt;
+</code></pre>
+
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+  <hr>
+
+  <!-- positions -->
+  <div>
+    <h2>CSS Position</h2>
+    <p>The position property in CSS controls how an element is placed on a webpage. It defines whether an element
+      follows the normal page flow or is moved elsewhere. The property works together with the offset values: top,
+      right, bottom, and left.</p>
+    <center>
+      <img src="images/position.png" width="600" height="400" alt="css positions property">
+    </center> <br> <br> <br>
+
+    <div>
+      <center>
+        <table border="0" cellspacing="0" cellpadding="10">
+          <tr>
+            <th width="700">Properties</th>
+            <th>Code</th>
+          </tr>
+          <tr>
+            <td>
+              <ul>
+                <li><b>static (default)</b>
+                  <ul>
+                    <li>All elements are static unless specified.</li>
+                    <li>They follow the normal document flow (stacking one after another).</li>
+                    <li>Offsets (top, left, etc.) are ignored.</li>
+                    <li>Commonly used for normal content.</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+            <td>
+              <pre><code>&lt;div style="position: static;"&gt;Static Box&lt;/div&gt;
+</code></pre>
+
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul>
+                <li><b>relative</b>
+                  <ul>
+                    <li>Element remains in the normal flow but can be shifted using offsets.</li>
+                    <li>Space is still reserved in its original position (like an invisible placeholder).</li>
+                    <li>Useful when you want slight adjustments without breaking layout.</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+            <td>
+              <pre><code>&lt;div style="position: relative; top: 20px; left: 10px;"&gt;
+  Relative Box
+&lt;/div&gt;
+</code></pre>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul>
+                <li><b>absolute</b>
+                  <ul>
+                    <li>Element is removed from normal flow (it doesn’t push other elements).</li>
+                    <li>It is positioned relative to the nearest ancestor that has position set (not static).</li>
+                    <li>If no ancestor is positioned, it uses the document body.</li>
+                    <li>Often used for tooltips, dropdowns, popups, etc.</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+            <td>
+              <pre><code>&lt;div style="position: relative;"&gt;
+  Parent
+  &lt;div style="position: absolute; top: 10px; left: 20px;"&gt;
+    Absolute Child
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul>
+                <li><b>fixed</b>
+                  <ul>
+                    <li>Element is positioned relative to the browser window (viewport).</li>
+                    <li>It does not move when the page is scrolled.</li>
+                    <li>Common for sticky navigation bars, floating buttons, or chat widgets.</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+            <td>
+              <pre><code>&lt;div style="position: fixed; bottom: 0; right: 0;"&gt;
+  Fixed Box
+&lt;/div&gt;
+</code></pre>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul>
+                <li><b>sticky</b>
+                  <ul>
+                    <li>Hybrid of relative and fixed.</li>
+                    <li>Starts as relative (moves with the document flow).</li>
+                    <li>Once scrolled beyond a threshold, it "sticks" like fixed.</li>
+                    <li>Great for sticky table headers or section titles.</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+            <td>
+              <pre><code>&lt;div style="position: sticky; top: 0; background: yellow;"&gt;
+  Sticky Header
+&lt;/div&gt;
+</code></pre>
+            </td>
+          </tr>
+        </table>
+      </center>
+    </div>
+  </div>
+  <hr>
+
+  <!-- other notes on posistioning -->
+  <div>
+    <h2>Other Notes on Positioning</h2>
+    <ol>
+      <li>
+        <h3>Z-index:</h3>
+        <p><i>Works with positioned elements (relative, absolute, fixed, sticky) to control which element appears on top
+            when they overlap.</i></p>
+      </li>
+      <li>
+        <h3>Stacking Context:</h3>
+        <p><i>Created by positioned elements with z-index, which affects how child elements overlap.</i></p>
+      </li>
+      <li>
+        <h3>Position + Display:</h3>
+        <p><i>Positioning changes only placement, not whether an element is block or inline</i></p>
+      </li>
+    </ol>
+  </div>
+  <hr><br> <br>
+
+  <!-- video lecture -->
+
+  <div>
+    <center>
+      <h2>See the video lecture</h2>
+      <iframe width="760" height="415" src="https://www.youtube.com/embed/HwvOyrPDqhM?si=U_4cpf5SdfvAXp5d"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </center>
+  </div><br><br><br><br>
+  
+  <!-- footer section -->
+  <footer>
+    <center>
+      <p>&copy; 2025 Monalisa</p>
+    </center>
+  </footer>
+</body>
+
+</html>
