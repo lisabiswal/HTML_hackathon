@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lecture 6</title>
+</head>
+<body>
+  <h1>HTML BoilerPlate Code | DIV + Class + ID (Lecture 6) </h1>
+  <button><a href="lec7.html" target="_blank">Go to lecture 7</a></button>
+  <hr>
+
+  <center>
+    <img src="images/bolierPlate.webp" alt="">
+  </center>
+  
+  <div class="filePath">
+    <h2>File Path</h2>
+    <p>In HTML, file paths are used to tell the browser where a file (like an image, CSS, JS, video, etc.) is located. <br> There are two main types of paths:</p>
+    <ol>
+      <li><b>Absolute Path</b></li>
+      <ul>
+        <li>Full URL of the file.</li>
+        <li>Always points to the same location, no matter where the HTML file is.</li>
+        <li>Example
+          <p>https://example.com/images/logo.png</p>
+        </li>
+      </ul>
+      <li><b>Relative Path</b></li>
+      <ul>
+        <li>Based on the location of your HTML file in the project.</li>
+        <li>Easier for local projects because files move together.</li>
+        <li><b>Types of relative paths:</b>
+          <ul>
+            <li>Same folder → file.jpg</li>
+            <li>Inside folder → images/file.jpg</li>
+            <li>One folder back → ../file.jpg</li>
+            <li>Two folders back → ../../file.jpg</li>
+          </ul>
+        </li>
+      </ul>
+    </ol>
+  </div><hr><br><br>
+
+  <div class="pathEg">
+    <center>
+    <table cellpadding="10">
+      <tr>
+        <th>1. Absolute Path Example</th>
+        <th>2. Relative Path Examples</th>
+      </tr>
+      <tr>
+        <td><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Absolute Path Example&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;!-- Loads from an external website --&gt;
+  &lt;img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools Logo"&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+            </code>
+          </pre>
+        </td>
+
+        <td>
+          <pre>
+            <code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Relative Path Example&lt;/title&gt;
+  &lt;!-- Linking CSS in same folder --&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;!-- Image inside &quot;images&quot; folder --&gt;
+  &lt;img src=&quot;images/logo.png&quot; alt=&quot;Logo&quot;&gt;
+
+  &lt;!-- JavaScript in same folder --&gt;
+  &lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+            </code>
+          </pre>
+        </td>
+      </tr>
+    </table>
+    </center>
+  </div>
+  <hr>
+  <div class="div">
+    <h2>Division:</h2>
+  <ul>
+    <li>&lt;div&gt; is a block-level container used to group HTML elements.</li>
+    <li>It does not add any style by itself, but helps in structuring the webpage.</li>
+    <li>Useful for applying CSS styles and JavaScript functions to a group of elements.</li>
+    <li>Example
+      <pre><code>&lt;div&gt;
+  &lt;h2&gt;Title&lt;/h2&gt;
+  &lt;p&gt;Some text here&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+    </li>
+  </ul>
+  </div>
+
+  <div class="id">
+    <h2>ID Attribute</h2>
+    <ul>
+      <li>id gives a unique identifier to an element.</li>
+      <li>Each id must be unique in a page (cannot be reused).</li>
+      <li>Mostly used for styling specific elements or JavaScript targeting.</li>
+      <li>Syntax: id="name"</li>
+      <li>Example
+        <pre><code>&lt;div id="header"&gt;This is header&lt;/div&gt;
+</code></pre>
+      </li>
+
+    </ul>
+  </div>
+
+  <div class="class">
+    <h2>class Attribute</h2>
+    <ul>
+      <li>class groups multiple elements together.</li>
+      <li>Unlike id, the same class can be used on many elements.</li>
+      <li>Useful for applying common styles to multiple elements.</li>
+      <li>Syntax: class="name"</li>
+      <li>Example:
+        <pre><code>&lt;div class="box"&gt;Box 1&lt;/div&gt;
+&lt;div class="box"&gt;Box 2&lt;/div&gt;
+</code></pre>
+      </li>
+    </ul>
+  </div> <hr>
+  
+
+  <center>
+    <div class="video">
+      <h2>See the video lecture</h2>
+      <iframe width="760" height="415" src="https://www.youtube.com/embed/k78lNSAB8VY?si=a9PvLLWN45r0ljAJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </center>
+
+
+  <footer>
+    <center>
+      <p>&copy; 2025 Monalisa</p>
+    </center>
+  </footer>
+  
+</body>
+</html>
